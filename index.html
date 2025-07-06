@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>My Portfolio</title>
+    <link rel="website icon" type="png" href="images/profile-logo.png">
+    <link rel="stylesheet" href="css/home-styles.css">
+    <link rel="stylesheet" href="css/home-query.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- --------------------------------- -->
+    <!-- ======== HEADER SECTION ========= -->
+    <!-- --------------------------------- -->
+    <header>
+        <nav class="header-container">
+            <!-- Menu Icon For Mobile -->
+            <i class="fa-solid fa-bars" id="menu-toggle"></i>
+
+            <!-- Branding -->
+            <div class="branding">
+                <img src="images/profile-logo.png" alt="brand image">
+                <h1><span id="branding-title">PORT</span>Folio</h1>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="ervices.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="contact-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- --------------------------------- -->
+    <!-- ========== MAIN SECTION ========= -->
+    <!-- --------------------------------- -->
+    <main class="main-container">
+        <section id="intro">
+            <!-- left side -->
+            <div class="social-container">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/chausofficial" target="_blank"> <img
+                            src="images/linkedin-in.svg" alt="linkedin icon"></a>
+                    <a href="https://www.instagram.com/chausofficial" target="_blank"><img src="images/instagram.svg"
+                            alt="instagram icon"></a>
+                    <a href="https://www.facebook.com/chausofficial" target="_blank"><img src="images/facebook.svg"
+                            alt="facebook icon"></a>
+                    <a href="https://www.youtube.com/@chausofficial" target="_blank"> <img src="images/youtube.svg"
+                            alt="youtube icon"></a>
+                </div>
+                <div class="social-info">
+                    <h1 class="animated-text">Sohel Chaus</h1>
+                    <p>Welcome to my portfolio—where creativity meets technology! Explore my
+                        work, dive into my skills, and discover how I bring ideas to life through design and
+                        development. Whether you're looking for stunning web solutions or captivating graphics, you've
+                        come to the right place. Feel free to browse and connect—I’d love to collaborate!</p>
+                </div>
+            </div>
+
+            <!-- right side -->
+            <div class="profile-container">
+                <span class="profile-title">SOHEL</span>
+                <img src="images/profile-photo.svg" alt="profile image" class="profile-image">
+            </div>
+        </section>
+
+        <!-------------------->
+        <!-- RATING SECTION -->
+        <!-------------------->
+        <section id="rating">
+            <div class="rating-container">
+
+                <div class="stat-box">
+                    <i class="fas fa-star"></i>
+                    <h2 class="count" data-target="40">0%</h2>
+                    <p>Current Expertise</p>
+                </div>
+
+                <div class="stat-box">
+                    <i class="fas fa-briefcase"></i>
+                    <h2 class="count" data-target="3">0+</h2>
+                    <p>Projects Persuing</p>
+                </div>
+
+                <div class="stat-box">
+                    <i class="fas fa-user-tie"></i>
+                    <h2 class="count" data-target="4">0+ Years</h2>
+                    <p>Growing Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------->
+        <!-- SERVICE SECTION -->
+        <!--------------------->
+        <div class="services-title">
+            <h2>Services</h2>
+            <P>HOW CAN <span id="services-paragraph">I HELP YOU</span></P>
+        </div>
+        <section id="services">
+            <div class="services-container">
+                <div class="service-box">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building dynamic, responsive websites for businesses.</p>
+                </div>
+
+                <div class="service-box">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphics Design</h3>
+                    <p>Designing logos, branding, and UI/UX visuals.</p>
+                </div>
+
+                <div class="service-box">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Enhancing site speed and search engine rankings.</p>
+                </div>
+
+                <div class="service-box">
+                    <i class="fas fa-tools"></i>
+                    <h3>Custom Web Solutions</h3>
+                    <p>Tailored websites and web apps to meet unique needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!------------------->
+        <!-- ABOUT SECTION -->
+        <!------------------->
+        <div class="about-title">
+            <h2>About</h2>
+            <P>WHAT MY <span id="about-paragraph">ABOUT</span> SAY’S</P>
+        </div>
+        <section id="about">
+            <div class="about-container">
+                <!-- Left Side - ABOUT CONTAINER -->
+                <div class="about-left">
+                    <img src="images/profile-photo.svg" alt="Sohel Chaus">
+                </div>
+
+                <!-- Right Side - ABOUT CONTAINER -->
+                <div class="about-right">
+                    <!------------->
+                    <!-- TAB BAR -->
+                    <!------------->
+                    <div class="tabs">
+                        <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+                        <button class="tab-link" onclick="openTab(event, 'certification')">Certification</button>
+                        <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+                    </div>
+
+                    <!----------------->
+                    <!-- TAB CONTENT -->
+                    <!----------------->
+
+                    <!-- ----------------------->
+                    <!-- SKILLS / TAB CONTENT -->
+                    <!-- ----------------------->
+                    <div class="tab-content active" id="skills">
+                        <h2>Skills</h2>
+
+                        <ul class="skills-list">
+                            <li><i class="fab fa-html5"></i><span>HTML</span></li>
+                            <li><i class="fab fa-js-square"></i><span>JS</span></li>
+                            <li><i class="fas fa-database"></i><span>MySQL</span></li>
+                            <li><i class="fab fa-css3-alt"></i><span>CSS</span></li>
+                            <li><i class="fas fa-paint-brush"></i><span>GFX</span></li>
+                        </ul>
+
+                    </div>
+
+                    <!--------------------------------->
+                    <!-- CERTIFICATION / TAB CONTENT -->
+                    <!--------------------------------->
+                    <div class="tab-content" id="certification">
+                        <h2>Certificates</h2>
+                        <div class="certification-container">
+                            <div class="certification active">
+                                <!-- TITLE -->
+                                <div class="cert-title">Project Management Certificate</div>
+                                <!-- IMAGE -->
+                                <div class="cert-slider">
+                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+                                    <img src="images/cft-01.jpg" class="cert-image" id="slide"
+                                        alt="Web Design Certificate">
+                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
+                                </div>
+                                <!-- DESCRIPTION -->
+                                <div class="cert-detail">
+                                    &emsp;&emsp;&emsp;Successfully completed LinkedIn Learning’s Project Management
+                                    course—gaining practical strategies to lead, plan, and deliver projects with
+                                    confidence and clarity.
+                                </div>
+                            </div>
+
+                            <div class="certification">
+                                <!-- TITLE -->
+                                <div class="cert-title">Project Management Certificate</div>
+                                <!-- IMAGE -->
+                                <div class="cert-slider">
+                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+                                    <img src="images/cft-02.jpg" class="cert-image" id="slide"
+                                        alt="Web Design Certificate">
+                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
+                                </div>
+                                <!-- DESCRIPTION -->
+                                <div class="cert-detail">
+                                    Successfully completed LinkedIn Learning’s Project Management course—gaining
+                                    practical strategies to lead, plan, and deliver projects with confidence and
+                                    clarity.
+                                </div>
+                            </div>
+
+                            <div class="certification">
+                                <!-- TITLE -->
+                                <div class="cert-title">Project Management Certificate</div>
+                                <!-- IMAGE -->
+                                <div class="cert-slider">
+                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+                                    <img src="images/cft-03.jpg" class="cert-image" id="slide"
+                                        alt="Web Design Certificate">
+                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
+                                </div>
+                                <!-- DESCRIPTION -->
+                                <div class="cert-detail">
+                                    Successfully completed LinkedIn Learning’s Project Management course—gaining
+                                    practical strategies to lead, plan, and deliver projects with confidence and
+                                    clarity.
+                                </div>
+                            </div>
+
+                            <div class="certification">
+                                <!-- TITLE -->
+                                <div class="cert-title">Project Management Certificate</div>
+                                <!-- IMAGE -->
+                                <div class="cert-slider">
+                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+                                    <img src="images/cft-04.jpg" class="cert-image" id="slide"
+                                        alt="Web Design Certificate">
+                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
+                                </div>
+                                <!-- DESCRIPTION -->
+                                <div class="cert-detail">
+                                    Successfully completed LinkedIn Learning’s Project Management course—gaining
+                                    practical strategies to lead, plan, and deliver projects with confidence and
+                                    clarity.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!----------------------------->
+                    <!-- EDUCATION / TAB CONTENT -->
+                    <!----------------------------->
+                    <div class="tab-content" id="education">
+                        <h2>Education</h2>
+                        <div class="ed-container">
+                            <div class="ed-dt">
+                                <p><span>Degree:</span> Bachelor’s In Computer Applications (BCA)</p>
+                                <p><span>Field:</span> Computer Science</p>
+                                <p><span>College:</span> Yeshwant College of Information Technology (YCIT)</p>
+                                <p><span>Duration:</span> 2023-2025</p>
+                            </div>
+
+                            <div class="ed-bg">
+                                <img src="images/college-bg.jpg" alt="college image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------->
+        <!-- PROJECT SECTION -->
+        <!--------------------->
+        <div class="project-section-title">
+            <h2>Project</h2>
+            <P>LOOK AT MY <span id="project-section-paragraph">PROJECT</span></P>
+        </div>
+        <section id="project">
+            <div class="project-container">
+                <!-------------------->
+                <!-- PROJECT BOX 01 -->
+                <!-------------------->
+                <div class="project-box">
+                    <div class="project-title">
+                        <img src="images/profile-logo.png" alt="logo">
+                        <h2>Sohel Chaus</h2>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/desktop-view.jpg" alt="thumbnail">
+                    </div>
+                    <div class="project-caption">
+                        <p>this is the paragraph first, this is the paragraph second, this is the paragraph second</p>
+                    </div>
+                </div>
+                <!-------------------->
+                <!-- PROJECT BOX 02 -->
+                <!-------------------->
+                <div class="project-box">
+                    <div class="project-title">
+                        <img src="images/profile-logo.png" alt="logo">
+                        <h2>Sohel Chaus</h2>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/desktop-view.jpg" alt="thumbnail">
+                    </div>
+                    <div class="project-caption">
+                        <p>this is the paragraph first, this is the paragraph second, this is the paragraph second</p>
+                    </div>
+                </div>
+                <!-------------------->
+                <!-- PROJECT BOX 03 -->
+                <!-------------------->
+                <div class="project-box">
+                    <div class="project-title">
+                        <img src="images/profile-logo.png" alt="logo">
+                        <h2>Sohel Chaus</h2>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/desktop-view.jpg" alt="thumbnail">
+                    </div>
+                    <div class="project-caption">
+                        <p>this is the paragraph first, this is the paragraph second, this is the paragraph second</p>
+                    </div>
+                </div>
+                <!-------------------->
+                <!-- PROJECT BOX 04 -->
+                <!-------------------->
+                <div class="project-box">
+                    <div class="project-title">
+                        <img src="images/profile-logo.png" alt="logo">
+                        <h2>Sohel Chaus</h2>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/desktop-view.jpg" alt="thumbnail">
+                    </div>
+                    <div class="project-caption">
+                        <p>this is the paragraph first, this is the paragraph second, this is the paragraph second</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- --------------------------------- -->
+    <!-- ======== FOOTER SECTION ========= -->
+    <!-- --------------------------------- -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sohel-chaus"><img src="images/linkedin-in.svg" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/chausofficial"><img src="images/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/chausofficial"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.youtube.com/@chausofficial"><img src="images/youtube.svg" alt="YouTube"></a>
+            </div>
+            <span id="divider"></span>
+            <div class="footer-section">
+                <ul>
+                    <li><img src="images/logo-contact.png" alt="logo"><a href="#">Contact</a></li>
+                    <li><img src="images/logo-policy.png" alt="logo"><a href="#">Privacy Policy</a></li>
+                    <li><img src="images/logo-resource.png" alt="logo"><a href="#">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-brand ">
+                <img src="images/profile-logo.png" alt="Brand Icon">
+                <h3>Sohel Chaus</h3>
+            </div>
+            <p>© 2025 Sohel Chaus | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="js/home-script.js" defer></script>
+</body>
+
+`
