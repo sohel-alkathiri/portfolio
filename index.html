@@ -18,16 +18,14 @@
     <!-- --------------------------------- -->
     <header>
         <nav class="header-container">
-            <!-- Menu Icon For Mobile -->
-            <i class="fa-solid fa-bars" id="menu-toggle"></i>
-
-            <!-- Branding -->
             <div class="branding">
                 <img src="images/profile-logo.png" alt="brand image">
                 <h1><span id="branding-title">PORT</span>Folio</h1>
             </div>
 
-            <!-- Main Navigation -->
+            <!------------->
+            <!-- NAV BAR -->
+            <!------------>
             <div class="menu-toggle" id="menu-toggle">&#9776;</div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="home.html">Home</a></li>
@@ -142,12 +140,12 @@
         </div>
         <section id="about">
             <div class="about-container">
-                <!-- Left Side - ABOUT CONTAINER -->
+                <!-- LEFT - ABOUT CONTAINER -->
                 <div class="about-left">
                     <img src="images/profile-photo.svg" alt="Sohel Chaus">
                 </div>
 
-                <!-- Right Side - ABOUT CONTAINER -->
+                <!-- RIGHT - ABOUT CONTAINER -->
                 <div class="about-right">
                     <!------------->
                     <!-- TAB BAR -->
@@ -157,17 +155,10 @@
                         <button class="tab-link" onclick="openTab(event, 'certification')">Certification</button>
                         <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
                     </div>
-
-                    <!----------------->
-                    <!-- TAB CONTENT -->
-                    <!----------------->
-
                     <!-- ----------------------->
                     <!-- SKILLS / TAB CONTENT -->
                     <!-- ----------------------->
                     <div class="tab-content active" id="skills">
-                        <h2>Skills</h2>
-
                         <ul class="skills-list">
                             <li><i class="fab fa-html5"></i><span>HTML</span></li>
                             <li><i class="fab fa-js-square"></i><span>JS</span></li>
@@ -175,108 +166,51 @@
                             <li><i class="fab fa-css3-alt"></i><span>CSS</span></li>
                             <li><i class="fas fa-paint-brush"></i><span>GFX</span></li>
                         </ul>
-
                     </div>
 
                     <!--------------------------------->
                     <!-- CERTIFICATION / TAB CONTENT -->
                     <!--------------------------------->
                     <div class="tab-content" id="certification">
-                        <h2>Certificates</h2>
                         <div class="certification-container">
+
                             <div class="certification active">
-                                <!-- TITLE -->
-                                <div class="cert-title">Project Management Certificate</div>
-                                <!-- IMAGE -->
+
                                 <div class="cert-slider">
                                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
                                     <img src="images/cft-01.jpg" class="cert-image" id="slide"
                                         alt="Web Design Certificate">
                                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                                 </div>
-                                <!-- DESCRIPTION -->
+
                                 <div class="cert-detail">
-                                    &emsp;&emsp;&emsp;Successfully completed LinkedIn Learning’s Project Management
-                                    course—gaining practical strategies to lead, plan, and deliver projects with
-                                    confidence and clarity.
+                                    <h2>Project Management Certificate</h2>
+                                    <p>&emsp;&emsp;&emsp;Successfully completed LinkedIn Learning’s Project Management
+                                        course—gaining practical strategies to lead, plan, and deliver projects with
+                                        confidence and clarity.</p>
                                 </div>
                             </div>
 
-                            <div class="certification">
-                                <!-- TITLE -->
-                                <div class="cert-title">Project Management Certificate</div>
-                                <!-- IMAGE -->
-                                <div class="cert-slider">
-                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-02.jpg" class="cert-image" id="slide"
-                                        alt="Web Design Certificate">
-                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
-                                </div>
-                                <!-- DESCRIPTION -->
-                                <div class="cert-detail">
-                                    Successfully completed LinkedIn Learning’s Project Management course—gaining
-                                    practical strategies to lead, plan, and deliver projects with confidence and
-                                    clarity.
-                                </div>
-                            </div>
-
-                            <div class="certification">
-                                <!-- TITLE -->
-                                <div class="cert-title">Project Management Certificate</div>
-                                <!-- IMAGE -->
-                                <div class="cert-slider">
-                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-03.jpg" class="cert-image" id="slide"
-                                        alt="Web Design Certificate">
-                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
-                                </div>
-                                <!-- DESCRIPTION -->
-                                <div class="cert-detail">
-                                    Successfully completed LinkedIn Learning’s Project Management course—gaining
-                                    practical strategies to lead, plan, and deliver projects with confidence and
-                                    clarity.
-                                </div>
-                            </div>
-
-                            <div class="certification">
-                                <!-- TITLE -->
-                                <div class="cert-title">Project Management Certificate</div>
-                                <!-- IMAGE -->
-                                <div class="cert-slider">
-                                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-04.jpg" class="cert-image" id="slide"
-                                        alt="Web Design Certificate">
-                                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
-                                </div>
-                                <!-- DESCRIPTION -->
-                                <div class="cert-detail">
-                                    Successfully completed LinkedIn Learning’s Project Management course—gaining
-                                    practical strategies to lead, plan, and deliver projects with confidence and
-                                    clarity.
-                                </div>
-                            </div>
                         </div>
 
 
                     </div>
+
                     <!----------------------------->
                     <!-- EDUCATION / TAB CONTENT -->
                     <!----------------------------->
                     <div class="tab-content" id="education">
-                        <h2>Education</h2>
                         <div class="ed-container">
-                            <div class="ed-dt">
+                            <img src="images/thumbnail.jpg" alt="Thumbnail">
+                            <div class="ed-content">
                                 <p><span>Degree:</span> Bachelor’s In Computer Applications (BCA)</p>
                                 <p><span>Field:</span> Computer Science</p>
                                 <p><span>College:</span> Yeshwant College of Information Technology (YCIT)</p>
                                 <p><span>Duration:</span> 2023-2025</p>
                             </div>
-
-                            <div class="ed-bg">
-                                <img src="images/college-bg.jpg" alt="college image">
-                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

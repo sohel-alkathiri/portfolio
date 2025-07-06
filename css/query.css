@@ -7,9 +7,17 @@
         padding: 0;
     }
 
+    .header-container {
+        padding: 0 1rem;
+    }
+    /* ----------- */
     /* MENU TOGGLE */
+    /* ----------- */
     .menu-toggle {
         display: block;
+        position: relative;
+        color: white;
+        z-index: 1001;
     }
 
     .nav-links {
@@ -17,14 +25,27 @@
         flex-direction: column;
         position: absolute;
         width: 100%;
-        top: 0;
+        top: 100%;
+        left: 0;
         right: 0;
         padding: 1rem;
-        background-color: #2d2d2d;
+        background-color: #202020;
+        z-index: 1000;
     }
 
     .nav-links.active {
         display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .nav-links li {
+        padding-bottom: 1rem;
+        margin: 0;
+    }
+    .contact-button {
+        margin: 2rem 1rem;
     }
 
     .main-container {
@@ -83,14 +104,16 @@
 
     /* ------------- */
     /* ABOUT SECTION */
-    /* ------------- */ 
+    /* ------------- */
     .about-left {
         display: none;
     }
+
     .about-right {
         display: flex;
         width: 100%;
     }
+
     .about-title {
         width: calc(100vw - 2rem);
         margin-left: 2rem;
@@ -101,6 +124,30 @@
         margin: 0 1rem;
     }
 
+    /* EDUCATION TAB */
+    .ed-content {
+        width: 100%;
+    }
+
+    /* CERTIFICATION TAB */
+    .certification.active {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .cert-slider {
+        width: 100%;
+    }
+
+    .cert-detail {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .cert-title {
+        margin: 0.5rem 0;
+    }
 
     /* --------------- */
     /* PROJECT SECTION */
