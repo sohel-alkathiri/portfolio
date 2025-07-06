@@ -1,0 +1,169 @@
+@media (max-width: 767px) and (min-width: 360px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* MENU TOGGLE */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        background-color: #2d2d2d;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .main-container {
+        width: calc(100vw - 2rem);
+        height: auto;
+        margin: 0 1rem;
+    }
+
+    /* ------------- */
+    /* INTRO SECTION */
+    /* ------------- */
+    #intro {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+    }
+
+    .social-container {
+        width: calc(100% - 4rem);
+        height: auto;
+        margin: 0 2rem;
+        top: 5%;
+    }
+
+    .profile-container {
+        display: flex;
+        width: calc(100% - 4rem);
+        height: auto;
+        margin: 0 2rem;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .rating-container {
+        margin-top: 2rem;
+    }
+
+    /* --------------- */
+    /* SERVICE SECTION */
+    /* --------------- */
+    .services-title {
+        width: calc(100vw - 2rem);
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .services-container {
+        width: calc(100vw - 4rem);
+        gap: 2rem;
+    }
+
+    /* ------------- */
+    /* ABOUT SECTION */
+    /* ------------- */ 
+    .about-left {
+        display: none;
+    }
+    .about-right {
+        display: flex;
+        width: 100%;
+    }
+    .about-title {
+        width: calc(100vw - 2rem);
+        margin-left: 2rem;
+    }
+
+    #about {
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+    }
+
+
+    /* --------------- */
+    /* PROJECT SECTION */
+    /* --------------- */
+    .project-container {
+        width: calc(100vw - 2rem);
+        height: auto;
+        margin: 0 1rem;
+    }
+
+    .project-section-title {
+        width: calc(100vw - 2rem);
+        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+    }
+
+    .project-box {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 2rem);
+        height: auto;
+        margin: 1rem;
+    }
+
+    .project-image img {
+        padding: 0 2rem;
+    }
+
+    .project-caption {
+        display: flex;
+        width: 100%;
+        height: 2rem;
+        padding: 3rem;
+    }
+
+    /* -------------- */
+    /* FOOTER SECTION */
+    /* -------------- */
+
+    .footer-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .footer-section ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-section ul li {
+        padding: 1rem;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+}
