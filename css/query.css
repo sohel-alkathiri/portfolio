@@ -8,8 +8,21 @@
     }
 
     .header-container {
-        padding: 0 1rem;
+        display: flex;
+        width: 100vw;
+        padding: 0.6rem 1.8rem;
     }
+    .header-container img {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .header-container h1 {
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    
     /* ----------- */
     /* MENU TOGGLE */
     /* ----------- */
@@ -28,7 +41,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        padding: 1rem;
+        padding: 1rem 2rem;
         font-size: 2rem;
         font-weight: bold;
         background-color: #202020;
@@ -125,13 +138,12 @@
 
     /* EDUCATION TAB */
     .ed-content {
-        width: 100%;
+        width: 70%;
+        font-size: 0.8rem;
+        padding: 1rem
     }
 
     /* CERTIFICATION TAB */
-    .certification {
-         gap: 1rem;
-    }
 
     .certification.active {
         display: flex;

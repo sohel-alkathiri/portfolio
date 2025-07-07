@@ -26,7 +26,7 @@ body {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     background-color: #202020;
     color: #fff;
 }
@@ -683,6 +683,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-size: 1rem;
     padding: 2rem;
     width: 40%;
     height: 100%;
@@ -690,7 +691,11 @@ body {
     border-radius: 0.5rem;
     color: white;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.ed-content span {
+    font-weight: bold;
+    color: #1C1C1C;
 }
 
 /* --------------- */
