@@ -129,6 +129,10 @@
     }
 
     /* CERTIFICATION TAB */
+    .certification {
+         gap: 1rem;
+    }
+
     .certification.active {
         display: flex;
         flex-direction: column;
