@@ -84,7 +84,8 @@ body {
 
 .nav-links li a {
     color: white;
-    font-size: clamp(0.6rem, 0.8vw + 0.4rem, 1rem);
+    font-size: clamp(1rem, 1.1vw + 0.5rem, 1.2rem);
+    font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
@@ -101,39 +102,45 @@ body {
 /* ----------------------------- */
 /* NAVIGATION BAR - EFFECT */
 /* ----------------------------- */
-.header-container ul li a:hover,
-.header-container ul li a:focus {
-    background-color: #00FF1A;
-    color: #1C1C1C;
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #00FF1A;
     text-decoration: none;
 }
 
-.header-container ul li a:active {
-    background-color: #FF8C00;
-    color: #1C1C1C;
+.nav-links li a:active {
+    color: #FF8C00;
 }
 
 /* -------------- */
 /* CONTACT BUTTON */
 /* -------------- */
-.contact-button {
+#contact-button {
+    display: inline;
+    padding: 0.5rem 1rem;
+    margin: 0;
     background-color: #00FF1A;
     color: #1C1C1C;
-    font-size: clamp(0.6rem, 0.8vw + 0.4rem, 1rem);
+    font-size: clamp(1rem, 1.1vw + 0.5rem, 1.2rem);
     border-radius: 5px;
-    text-decoration: none;
     list-style-type: none;
 }
-
-.contact-button:hover {
-    background-color: #00CC66;
+#contact-button:hover {
+    background: transparent;
+    outline: 2px solid white;
+}
+#contact-button a {
     text-decoration: none;
+    color: #1C1C1C;  
+    font-weight: bold;
+}
+#contact-button a:hover {
+    color: white;
 }
 
-/* ----------------------------HEADER END------------------------------ */
-/* ____________________________________________________________________ */
-
+/* ------------ */
 /* MAIN SECTION */
+/* ------------ */
 .main-container {
     display: flex;
     flex-direction: column;

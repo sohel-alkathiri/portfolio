@@ -29,6 +29,8 @@
         left: 0;
         right: 0;
         padding: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
         background-color: #202020;
         z-index: 1000;
     }
@@ -44,10 +46,7 @@
         padding-bottom: 1rem;
         margin: 0;
     }
-    .contact-button {
-        margin: 2rem 1rem;
-    }
-
+   
     .main-container {
         width: calc(100vw - 2rem);
         height: auto;
