@@ -776,6 +776,7 @@ body {
     object-fit: contain;
     border-radius: 0.5rem;
     padding: 0 4rem;
+    cursor: pointer;
 }
 
 .project-caption {
