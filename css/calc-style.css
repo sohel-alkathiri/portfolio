@@ -143,14 +143,14 @@ body {
 
 @media (min-width: 360px) and (max-width: 767px) {
     .project-container {
-        width: calc(100% - 2rem);
+        width: calc(100% - 4rem);
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 1rem;
-        padding: 1rem;
+        margin: 0 2rem;
+        padding: 2rem;
     }
 
     /* ------------------- */
@@ -164,13 +164,14 @@ body {
     }
 
     .project-preview h2 {
-        width: 100%;
+        width: calc(100% - 4rem);
         text-align: left;
-        margin: 0 0.5rem;
+        margin: 0 2rem
     }
 
     .project-preview iframe {
-        width: 360px !important;
+        width: calc(376px - 16px) !important;
+        margin: 0 8px;
         height: 600px !important;
     }
 
@@ -186,9 +187,9 @@ body {
     }
 
     .project-overview h2 {
-        width: 100%;
+        width: calc(100% - 4rem);
         text-align: left;
-        margin: 0.5rem 0;
+        margin: 0 2rem
     }
 
     .project-overview p {
@@ -201,4 +202,9 @@ body {
         height: auto;
     }
 
+    .progress-bar {
+        width: calc(100% - 4rem);
+        height: auto;
+        margin: 0 2rem;
+    }
 }
