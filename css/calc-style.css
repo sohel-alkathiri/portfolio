@@ -16,7 +16,6 @@ body {
     font-size: clamp(0.8rem, 0.9vw + 0.4rem, 1rem);
     color: #ffffff;
     background-color: #1C1C1C;
-    overflow: hidden;
 }
 
 .project-container {
@@ -142,20 +141,15 @@ body {
 /* ------------- */
 
 @media (min-width: 360px) and (max-width: 767px) {
-    body {
-        width: calc(100vw - 2rem);
-        height: 100vh;
-        margin: 1rem;
-    }
     .project-container {
-        width: calc(100% - 4rem);
+        width: calc(100% - 2rem);
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 2rem;
-        padding: 2rem;
+        margin: 1rem;
+        padding: 1rem;
     }
 
     /* ------------------- */
