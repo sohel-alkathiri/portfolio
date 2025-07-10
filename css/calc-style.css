@@ -143,13 +143,12 @@ body {
 
 @media (min-width: 360px) and (max-width: 767px) {
     .project-container {
-        width: calc(100vw - 2rem);
+        width: 100vw;
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 1rem;
         padding: 2rem;
     }
 
@@ -166,13 +165,13 @@ body {
     .project-preview h2 {
         width: 100%;
         text-align: left;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     .project-preview iframe {
-        width: calc(100% - 2rem) !important;
-        margin: 0 1rem;
-        height: 40rem !important;
+        width: calc(100% - 1rem) !important;
+        margin: 0 0.5rem;
+        height: 30rem !important;
     }
 
     /* --------------------- */
@@ -189,7 +188,7 @@ body {
 .project-overview h2 {
     width: 100%;
     text-align: left;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .project-overview p {
