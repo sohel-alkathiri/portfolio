@@ -16,7 +16,7 @@ body {
     font-size: clamp(0.8rem, 0.9vw + 0.4rem, 1rem);
     color: #ffffff;
     background-color: #1C1C1C;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .project-container {
@@ -149,7 +149,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 2rem;
+        margin: 2rem;
         padding: 2rem;
     }
 
