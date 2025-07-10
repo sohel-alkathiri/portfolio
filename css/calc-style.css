@@ -20,7 +20,7 @@ body {
 }
 
 .project-container {
-    width: calc(100vw - 4rem);
+    width: calc(100% - 4rem);
     height: auto;
     display: flex;
     flex-direction: row;
@@ -143,13 +143,14 @@ body {
 
 @media (min-width: 360px) and (max-width: 767px) {
     .project-container {
-        width: 100vw;
+        width: calc(100% - 2rem);
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
+        margin: 1rem;
+        padding: 1rem;
     }
 
     /* ------------------- */
@@ -165,40 +166,39 @@ body {
     .project-preview h2 {
         width: 100%;
         text-align: left;
-        margin: 0.5rem 0;
+        margin: 0 0.5rem;
     }
 
     .project-preview iframe {
-        width: calc(100% - 1rem) !important;
-        margin: 0 0.5rem;
-        height: 30rem !important;
+        width: 360px !important;
+        height: 600px !important;
     }
 
     /* --------------------- */
-/* RIGHT SIDE - OVERVIEW */
-/* --------------------- */
-.project-overview {
-    width: calc(100% - 2rem);
-    height: auto;
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-}
+    /* RIGHT SIDE - OVERVIEW */
+    /* --------------------- */
+    .project-overview {
+        width: calc(100% - 2rem);
+        height: auto;
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 
-.project-overview h2 {
-    width: 100%;
-    text-align: left;
-    margin: 0.5rem 0;
-}
+    .project-overview h2 {
+        width: 100%;
+        text-align: left;
+        margin: 0.5rem 0;
+    }
 
-.project-overview p {
-    padding: 2rem 1rem;
-}
+    .project-overview p {
+        padding: 2rem 1rem;
+    }
 
-/* PROGRESS BAR */
-.progress-bar-container {
-    width: 100%;
-    height: auto;
-}
+    /* PROGRESS BAR */
+    .progress-bar-container {
+        width: 100%;
+        height: auto;
+    }
 
 }
