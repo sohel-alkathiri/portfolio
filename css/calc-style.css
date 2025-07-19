@@ -253,7 +253,7 @@ body {
     }
 
     .project-preview iframe {
-        width: calc(100% - 8px) !important;
+        width: calc(320px - 8px) !important;
         margin: 0 4px;
         height: 500px !important;
     }
