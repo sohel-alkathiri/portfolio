@@ -1,4 +1,4 @@
-@media (max-width: 767px) and (min-width: 360px) {
+@media (max-width: 767px) and (min-width: 320px) {
 
     body {
         width: 100vw;
@@ -12,10 +12,11 @@
         width: 100vw;
         padding: 0.6rem 1.6rem;
     }
+
     .header-container h1 {
         font-size: 1rem;
     }
-    
+
     /* ----------- */
     /* MENU TOGGLE */
     /* ----------- */
@@ -52,7 +53,7 @@
         padding-bottom: 1rem;
         margin: 0;
     }
-   
+
     .main-container {
         width: calc(100vw - 2rem);
         height: auto;
@@ -89,6 +90,9 @@
         object-fit: contain;
     }
 
+    /* ------ */
+    /* RATING */
+    /* ------ */
     .rating-container {
         margin-top: 2rem;
     }
@@ -110,15 +114,6 @@
     /* ------------- */
     /* ABOUT SECTION */
     /* ------------- */
-    .about-left {
-        display: none;
-    }
-
-    .about-right {
-        display: flex;
-        width: 100%;
-    }
-
     .about-title {
         width: calc(100vw - 2rem);
         margin-left: 2rem;
@@ -127,6 +122,37 @@
     #about {
         width: calc(100% - 2rem);
         margin: 0 1rem;
+    }
+
+    .about-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .about-left {
+        display: none;
+    }
+
+    .about-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: calc(100% - 1rem);
+        gap: 0.5rem;
+    }
+
+    .tab-link {
+        padding: 0.8rem;
     }
 
     /* EDUCATION TAB */
@@ -149,7 +175,7 @@
     }
 
     .cert-detail {
-        width: 100%;
+        width: calc(100% - 1rem);
         padding: 0.5rem;
     }
 
@@ -221,4 +247,5 @@
         display: flex;
         flex-direction: column;
     }
+
 }
