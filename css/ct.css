@@ -172,7 +172,7 @@ body {
 
 /*  SMARTPHONE QUERY */
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (max-width: 767px) and (min-width: 320px) {
     .main-container {
         display: flex;
         flex-direction: column;
