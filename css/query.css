@@ -155,14 +155,19 @@
         padding: 0.8rem;
     }
 
+
     /* EDUCATION TAB */
     .ed-content {
-        width: 70%;
-        font-size: 0.8rem;
-        padding: 1rem
+        width: calc(80% - 2rem);
+        height: 100%;
+        padding: 1rem;
     }
 
     /* CERTIFICATION TAB */
+
+    .certification {
+        gap: 0;
+    }
 
     .certification.active {
         display: flex;
@@ -170,8 +175,14 @@
         margin: 0;
     }
 
+    .cert-title {
+        margin: 0.5rem 0;
+    }
+
     .cert-slider {
         width: 100%;
+        position: relative;
+        overflow: hidden;
     }
 
     .cert-detail {
@@ -179,9 +190,6 @@
         padding: 0.5rem;
     }
 
-    .cert-title {
-        margin: 0.5rem 0;
-    }
 
     /* --------------- */
     /* PROJECT SECTION */
