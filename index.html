@@ -30,10 +30,10 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="skill.html">Skills</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
                 <li>
-                    <span id="contact-button"><a href="contact.html" >Contact</a></span>
+                    <span id="contact-button"><a href="contact.html">Contact</a></span>
                 </li>
             </ul>
         </nav>
@@ -53,8 +53,8 @@
                             alt="instagram icon"></a>
                     <a href="https://www.facebook.com/chausofficial" target="_blank"><img src="images/facebook.svg"
                             alt="facebook icon"></a>
-                    <a href="https://www.youtube.com/@chausofficial" target="_blank"> <img src="images/youtube.svg"
-                            alt="youtube icon"></a>
+                    <!-- <a href="https://www.youtube.com/@chausofficial" target="_blank"> <img src="images/youtube.svg"
+                            alt="youtube icon"></a> -->
                 </div>
                 <div class="social-info">
                     <h1 class="animated-text">Sohel Chaus</h1>
@@ -128,7 +128,7 @@
                 <div class="service-box">
                     <i class="fa-regular fa-keyboard"></i>
                     <h3>Writing</h3>
-                    <p>I turn ideas into impactful words, creative, concise and tailored to your audience.</p>
+                    <p>Turn ideas into impactful words for concise to your audience.</p>
                 </div>
             </div>
         </section>
@@ -161,12 +161,63 @@
                     <!-- SKILLS / TAB CONTENT -->
                     <!-- ----------------------->
                     <div class="tab-content active" id="skills">
-                        <ul class="skills-list">
-                            <li><i class="fa-brands fa-html5"></i><span>HTML</span></li>
-                            <li><i class="fa-brands fa-css"></i><span>CSS</span></li>
-                            <li><i class="fa-brands fa-js"></i><span>JS</span></li>
-                            <li><i class="fa-solid fa-database"></i><span>SQL</span></li>
-                        </ul>
+                        <div class="progress-bar-container">
+                            <!-- SKILL ONE -->
+                            <div class="progress-bar">
+                                <img src="images/html.png" alt="html">
+
+                                <div class="progress-detail">
+                                    <p class="progress-title">HTML</p>
+                                    <div class="bar">
+                                        <div class="fill" style="--progress: 70%">70%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SKILL TWO -->
+                            <div class="progress-bar">
+                                <img src="images/css.png" alt="css">
+
+                                <div class="progress-detail">
+                                    <p class="progress-title">CSS</p>
+                                    <div class="bar">
+                                        <div class="fill" style="--progress: 60%">60%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SKILL THREE -->
+                            <div class="progress-bar">
+                                <img src="images/js.png" alt="js">
+
+                                <div class="progress-detail">
+                                    <p class="progress-title">JS</p>
+                                    <div class="bar">
+                                        <div class="fill" style="--progress: 40%">40%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SKILL FOUR -->
+                            <div class="progress-bar">
+                                <img src="images/html.png" alt="sql">
+
+                                <div class="progress-detail">
+                                    <p class="progress-title">SQL</p>
+                                    <div class="bar">
+                                        <div class="fill" style="--progress: 50%">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SKILL FIVE -->
+                            <div class="progress-bar">
+                                <img src="images/html.png" alt="office">
+
+                                <div class="progress-detail">
+                                    <p class="progress-title">MS Office</p>
+                                    <div class="bar">
+                                        <div class="fill" style="--progress: 80%">80%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!--------------------------------->
@@ -178,8 +229,7 @@
                             <div class="certification active">
                                 <div class="cert-slider">
                                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-01.jpg" class="cert-image" id="slide"
-                                        alt="Project Management">
+                                    <img src="images/cft-01.jpg" class="cert-image" id="slide" alt="Project Management">
                                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                                 </div>
 
@@ -193,56 +243,58 @@
                             <div class="certification">
                                 <div class="cert-slider">
                                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-02.jpg" class="cert-image" id="slide"
-                                        alt="Css Basics">
+                                    <img src="images/cft-02.jpg" class="cert-image" id="slide" alt="Css Basics">
                                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                                 </div>
 
                                 <div class="cert-detail">
                                     <h2>CSS Basics</h2>
-                                    <p>&emsp;&emsp;&emsp;I am certified in the fundamentals of CSS, including styling web pages, creating clean layouts, and improving user experience.</p>
+                                    <p>&emsp;&emsp;&emsp;I am certified in the fundamentals of CSS, including styling
+                                        web pages, creating clean layouts, and improving user experience.</p>
                                 </div>
                             </div>
 
                             <div class="certification">
                                 <div class="cert-slider">
                                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-03.jpg" class="cert-image" id="slide"
-                                        alt="Web Design">
+                                    <img src="images/cft-03.jpg" class="cert-image" id="slide" alt="Web Design">
                                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                                 </div>
 
                                 <div class="cert-detail">
                                     <h2>Web Design</h2>
-                                    <p>&emsp;&emsp;&emsp;I'm certified in basic web design. This includes understanding layout principles, using HTML & CSS effectively and design user-friendly webpages.</p>
+                                    <p>&emsp;&emsp;&emsp;I'm certified in basic web design. This includes understanding
+                                        layout principles, using HTML & CSS effectively and design user-friendly
+                                        webpages.</p>
                                 </div>
                             </div>
 
                             <div class="certification">
                                 <div class="cert-slider">
                                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-04.jpg" class="cert-image" id="slide"
-                                        alt="Eng">
+                                    <img src="images/cft-04.jpg" class="cert-image" id="slide" alt="Eng">
                                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                                 </div>
 
                                 <div class="cert-detail">
                                     <h2>English Basics</h2>
-                                    <p>&emsp;&emsp;&emsp;I am certified in foundational English skills through Skill India Digital Hub. This includes basic grammar, vocabulary, sentence formation.</p>
+                                    <p>&emsp;&emsp;&emsp;I am certified in foundational English skills through Skill
+                                        India Digital Hub. This includes basic grammar, vocabulary, sentence formation.
+                                    </p>
                                 </div>
                             </div>
 
                             <div class="certification">
                                 <div class="cert-slider">
                                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
-                                    <img src="images/cft-05.jpg" class="cert-image" id="slide"
-                                        alt="Typing">
+                                    <img src="images/cft-05.jpg" class="cert-image" id="slide" alt="Typing">
                                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                                 </div>
 
                                 <div class="cert-detail">
                                     <h2>Typing</h2>
-                                    <p>&emsp;&emsp;&emsp;I am certified in English typing fundamentals. I can type accurately and apply basic formatting to documents.</p>
+                                    <p>&emsp;&emsp;&emsp;I am certified in English typing fundamentals. I can type
+                                        accurately and apply basic formatting to documents.</p>
                                 </div>
                             </div>
 
@@ -256,9 +308,9 @@
                         <div class="ed-container">
                             <img src="images/college.jpg" alt="Thumbnail">
                             <div class="ed-content">
-                                <p><span>Degree:</span> Bachelor’s In Computer Applications (BCA)</p>
+                                <p><span>Degree:</span> Bachelor’s In Computer Applications</p>
                                 <p><span>Field:</span> Computer Science</p>
-                                <p><span>College:</span> Yeshwant College of Information Technology (YCIT)</p>
+                                <p><span>College:</span> Yeshwant College of Information Technology</p>
                                 <p><span>Duration:</span> 2023-2025</p>
                             </div>
                         </div>
@@ -289,7 +341,8 @@
                         <a href="calc.html"><img src="images/calc-img.jpg" alt="thumbnail"></a>
                     </div>
                     <div class="project-caption">
-                        <p>Mini Calculator Project A sleek and responsive calculator built with HTML, CSS, and JavaScript.</p>
+                        <p>Mini Calculator Project A sleek and responsive calculator built with HTML, CSS, and
+                            JavaScript.</p>
                     </div>
                 </div>
                 <!-------------------->
@@ -357,7 +410,7 @@
             <div class="footer-section">
                 <ul>
                     <li><img src="images/logo-contact.png" alt="logo"><a href="contact.html">Contact</a></li>
-                    <li><img src="images/logo-policy.png" alt="logo"><a href="#">Privacy Policy</a></li>
+                    <li><img src="images/logo-policy.png" alt="logo"><a href="#">Privacy</a></li>
                     <li><img src="images/logo-resource.png" alt="logo"><a href="#">Resources</a></li>
                 </ul>
             </div>

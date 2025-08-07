@@ -21,7 +21,7 @@ body {
     padding: 1rem 5rem;
     justify-content: space-between;
     align-items: center;
-    background-color: #202020;
+    background-color: #1b1d1a;
     color: #fff;
 }
 
@@ -31,7 +31,7 @@ body {
 .header-container i {
     display: none;
     font-size: 1.8rem;
-    color: #00ff1a;
+    color: #ffcc29;
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 #branding-title {
-    color: #00FF1A;
+    color: #ffcc29;
 }
 
 
@@ -157,8 +157,9 @@ body {
 }
 
 .contact-form button {
-    background-color: #00ff1a;
-    color: white;
+    font-weight: bold;
+    background-color: #ffcc29;
+    color: #1b1d1a;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;

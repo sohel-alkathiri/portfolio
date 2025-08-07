@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #1C1C1C;
+    background-color: #1b1d1a;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ body {
 .header-container i {
     display: none;
     font-size: 1.8rem;
-    color: #00ff1a;
+    color: #ffcc29;
     cursor: pointer;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 #branding-title {
-    color: #00FF1A;
+    color: #ffcc29;
 }
 
 
@@ -188,7 +188,7 @@ body {
     overflow: hidden;
     border-radius: 1rem;
     background-color: white;
-    color: #1c1c1c;
+    color: #1b1d1a;
 }
 
 .fill {
@@ -198,7 +198,7 @@ body {
     font-weight: bold;
     border-radius: 1rem;
     color: white;
-    background-color: #00ff1a;
+    background-color: #ffcc29;
     animation: fillBar 2s forwards;
 }
 
