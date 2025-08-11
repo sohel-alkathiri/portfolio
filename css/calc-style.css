@@ -20,25 +20,52 @@ body {
 /* HEADER SECTION */
 /* -------------- */
 .header-container {
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
-    position: relative;
-    padding: 1rem 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #202020;
     color: #fff;
+    background-color: #1b1d1a;
 }
 
 /* ------------------- */
 /* MENU BAR FOR MOBILE */
 /* ------------------- */
-.header-container i {
-    display: none;
-    font-size: 1.8rem;
+ 
+.header-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+
+}
+
+/* ----------- */
+/* BACK BUTTON */
+/* ----------- */
+.back-btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+}
+.back-btn i {
+    font-size: 1.5rem;
+    padding-right: 1rem;
     color: #ffcc29;
     cursor: pointer;
+}
+.back-btn a {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
+    text-decoration: none;
+    color: white;
+}
+
+.back-btn a:hover {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* -------- */
@@ -47,51 +74,24 @@ body {
 .branding {
     display: flex;
     align-items: center;
+    padding-right: 5rem;
 }
 
 .branding img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     margin-right: 0.5rem;
 }
 
-.branding h1 {
+.branding p {
     color: white;
-    font-size: clamp(0.8rem, 1vw + 0.5rem, 1.5rem);
+    font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
     font-weight: bold;
 }
 
 #branding-title {
     color: #ffcc29;
 }
-
-
-/* ----------- */
-/* BACK BUTTON */
-/* ----------- */
-.back-btn {
-    display: flex;
-    align-items: center;
-}
-
-.back-btn img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: 0.5rem;
-}
-
-.back-btn a {
-    font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-}
-
-.back-btn a:hover {
-    color: rgba(255, 255, 255, 0.8);
-}
-
 /* ------------ */
 /* MAIN SECTION */
 /* ------------ */
