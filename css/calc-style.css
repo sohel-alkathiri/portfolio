@@ -166,12 +166,11 @@ body {
 
 .pb-left {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
-.pb-left img {
-    width: 2rem;
-    height: 2rem;
+.pb-left i {
+    font-size: 2rem;
 }
 
 .pb-right {
@@ -179,6 +178,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .bar {
