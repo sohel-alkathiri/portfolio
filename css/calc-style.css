@@ -33,12 +33,11 @@ body {
  
 .header-container ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     width: 100%;
     height: auto;
-
 }
 
 /* ----------- */
@@ -109,10 +108,9 @@ body {
 /* LEFT SIDE - PREVIEW */
 /* ------------------- */
 .project-preview {
+    display: flex;
     width: 50%;
     height: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .project-preview h2 {
@@ -176,7 +174,6 @@ body {
 .pb-right {
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -218,11 +215,9 @@ body {
 
 @media (max-width: 767px) and (min-width: 320px) {
     .header-container {
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: flex;
-        position: relative;
-        padding: 0.5rem 1rem;
     }
 
     .project-container {
@@ -240,43 +235,47 @@ body {
     /* LEFT SIDE - PREVIEW */
     /* ------------------- */
     .project-preview {
-        width: 100%;
-        height: auto;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        height: auto;
     }
 
     .project-preview h2 {
-        width: calc(100% - 2rem);
+        width: 100%;
         text-align: left;
-        margin: 0 1rem
+        margin: 1rem 0;
     }
 
     .project-preview iframe {
+        display: flex;
         width: calc(100% - 1rem) !important;
-        margin: 0 0.5rem;
         height: 35rem !important;
+        margin: 0 0.5rem;
     }
 
     /* --------------------- */
     /* RIGHT SIDE - OVERVIEW */
     /* --------------------- */
     .project-overview {
-        width: calc(100% - 2rem);
+        width: 100%;
         height: auto;
-        margin: 0 1rem;
+        margin: 1rem 0;
         display: flex;
         flex-direction: column;
     }
 
     .project-overview h2 {
-        width: calc(100% - 2rem);
+        width: 100%;
+        height: auto;
         text-align: left;
-        margin: 0 1rem
+        margin: 1rem 0;
     }
 
     .project-overview p {
-        padding: 2rem 1rem;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
     }
 
     /* PROGRESS BAR */
