@@ -465,42 +465,29 @@ body {
 .tabs {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    width: calc(100% - 2rem);
+    width: 100%;
     gap: 1rem;
+    box-sizing: border-box;
 }
 
 .tab-link {
     background: #1C1C1C;
     color: white;
-    flex-grow: 1;
-    position: relative;
-    padding: 1rem;
+    flex: 1;
+    padding: 1rem 2rem;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.3s;
-    box-sizing: border-box;
     font-weight: 100;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .tab-link.active {
-    background: #1b1d1a;
-    color: white;
+    background: #ffcc29;
+    color: #1b1d1a;
     font-weight: bold;
-}
-
-/* TAB NOTCH */
-.tab-link.active::after {
-    background: #1b1d1a;
-    content: "";
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 2.5rem;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Tab interface */
