@@ -190,6 +190,7 @@ body {
     align-items: center;
     overflow: hidden;
     padding: .5rem;
+    text-decoration: none;
 }
 
 .social-links i {
