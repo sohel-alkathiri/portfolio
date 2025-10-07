@@ -61,6 +61,21 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.dash-btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+}
+
+.dash-btn a {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
+    text-decoration: none;
+    color: white;
+}
+
 /* -------- */
 /* BRANDING */
 /* -------- */

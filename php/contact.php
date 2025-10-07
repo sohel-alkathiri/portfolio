@@ -4,14 +4,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST["email"];
   $message = $_POST["message"];
 
-  $to = "sohel.alkathiri@email.com";
-  $subject = "New Contact Form Message";
-  $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+  /------------------
+  // MYSQL CONNECTION
+  // ----------------
 
-  if (mail($to, $subject, $body)) {
-    echo "Message Sent.";
-  } else {
-    echo "Message Not Send.";
+  $conn = new mysqli("sql213.infinityfree.com", "if0_40097979", "4GAy9BITXp", "if0_40097979_contactform_db");
+
+  if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
   }
+
+  // ---------------------
+  // INSERT MESSAGE - MYSQL
+  // ----------------------
+
+  $sql = "INSERT INTO message (name, email, message) VALUES ('$name', '$email', '$message')";
+  if ($conn->query($sql) === TRUE) {
+    echo "Message stored successfully!";
+  } else {
+    echo "Error storing message: " . $conn->error;
+  }
+
+  $conn->close();
 }
 ?>
