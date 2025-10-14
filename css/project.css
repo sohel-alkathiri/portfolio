@@ -91,6 +91,7 @@ body {
 #branding-title {
     color: #ffcc29;
 }
+
 /* ------------ */
 /* MAIN SECTION */
 /* ------------ */
@@ -104,6 +105,14 @@ body {
     margin: 2rem;
 }
 
+.section-header {
+    width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 2rem);
+}
+
 /* ------------------- */
 /* LEFT SIDE - PREVIEW */
 /* ------------------- */
@@ -111,12 +120,6 @@ body {
     display: flex;
     width: 50%;
     height: auto;
-}
-
-.project-preview h2 {
-    width: 50%;
-    text-align: left;
-    margin: 1rem 0;
 }
 
 .project-preview iframe {
@@ -135,12 +138,6 @@ body {
     margin: 0 2rem;
     display: flex;
     flex-direction: column;
-}
-
-.project-overview h2 {
-    width: 50%;
-    text-align: left;
-    margin: 1rem 0;
 }
 
 .project-overview p {
@@ -194,7 +191,7 @@ body {
     padding: 0.5rem;
     font-weight: bold;
     border-radius: 1rem;
-    color: white;
+    color: #1b1d1a;
     background-color: #ffcc29;
     animation: fillBar 2s forwards;
 }
