@@ -136,39 +136,40 @@ body {
 /* ---------- */
 /* RIGHT SIDE */
 /* ---------- */
-.progress-bar-container {
+.project-tech {
     width: 50%;
     height: auto;
 }
 
-.progress-bar {
-    width: calc(100% - 2rem);
+.progress-bar-container {
+    width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 1rem;
 }
 
-.pb-left {
-    display: flex;
-    align-items: flex-end;
-    width: 20%;
+.progress-bar-container i {
+    width: 25%;
     height: auto;
-}
-
-.pb-left i {
     font-size: clamp(2rem, 2.5vw + 0.5rem, 3rem);
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
 }
 
-.pb-right {
-    flex: 1;
-    flex-direction: column;
+/* ------------------- */
+/* PROGRESS BAR | LEFT */
+/* ------------------- */
+.progress-bar {
+    width: 75%;
+    height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.pb-title {
+
+.project-bar h2 {
     display: flex;
     text-align: left;
     width: 100%;
@@ -176,13 +177,9 @@ body {
 }
 
 .bar {
-    width: 80%;
-    height: 2rem;
-    display: flex;
-    overflow: hidden;
-    border-radius: 1rem;
-    background-color: white;
-    color: #1b1d1a;
+    background-color: #ffffff;
+     border-radius: 1rem;
+     width: 80%;
 }
 
 .fill {
