@@ -50,11 +50,12 @@ body {
 .branding {
     display: flex;
     align-items: center;
+    justify-items: space-between;
 }
 
 .branding img {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     margin-right: 1rem;
 }
 
