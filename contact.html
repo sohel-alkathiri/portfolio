@@ -33,7 +33,7 @@
         <div class="right-panel">
             <h2 class="ct-title">Get In Touch</h2>
             <p>Fill out the form below and we'll get back to you as soon as possible.</p>
-            <form action="php/contact.php" method="post" id="contactForm">
+            <form action="sohelchaus.infinityfreeapp.com/php/contact.php" method="post" id="contactForm">
 
                 <!-- NAME -->
                 <div class="input-field">
@@ -57,7 +57,7 @@
                         <i class="fa-solid fa-phone"></i>
                         <input type="tel" id="phone" name="phone" placeholder="Phone (Optional)" required>
                     </div>
-                </div>   
+                </div>
 
                 <!-- SUBJECT -->
                 <div class="input-field">
@@ -73,6 +73,7 @@
                     </div>
                 </div>
 
+                <!-- TEXTAREA -->
                 <div class="message-area">
                     <div class="area">
                         <i class="fa-solid fa-message"></i>
@@ -80,10 +81,35 @@
                     </div>
                 </div>
 
+                <!-- SUBMIT -->
                 <button type="submit">Send Message</button>
-                <span id="formLoader"><i class="fa-solid fa-spinner">Message Sending</i></span>
+
+                <!-- LOADER -->
+                <div class="form-loader" id="formLoader">
+                    <div class="dot-spinner">
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                        <div class="dot-spinner__dot"></div>
+                    </div>
+                    <h2 id="loaderMessage">Sending Message</h2>
+                </div>
             </form>
-            <div id="responseMessage" style="display: none; padding: 0.5rem; border-radius: 0.5rem;"></div>
+
+            <!-- RESPONSE -->
+            <div class="popup-message success" id="successMessage">
+                <i class="icon-check"></i>
+                <span>Message sent successfully!</span>
+            </div>
+
+            <div class="popup-message error" id="errorMessage">
+                <i class="icon-error"></i>
+                <span>Something went wrong. Please try again.</span>
+            </div>
         </div>
     </div>
     <script src="js/contact.js"></script>

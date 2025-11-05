@@ -28,3 +28,28 @@
         showPopup('A network error occurred. Please try again later.', 'error');
     });
 }
+
+
+
+   function showPopup(message, type) {
+    const popup = document.getElementById('responseMessage');
+    popup.textContent = message;
+
+    if (type === 'success') {
+        popup.style.backgroundColor = '#d4edda';
+        popup.style.color = '#155724';
+        popup.style.border = '1px solid #c3e6cb';
+    } else {
+        popup.style.backgroundColor = '#f8d7da';
+        popup.style.color = '#721c24';
+        popup.style.border = '1px solid #f5c6cb';
+    }
+    
+    // Make it visible
+    popup.style.display = 'block';
+
+    // Optional: Make it disappear after a few seconds
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 5000);
+}
