@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
 
-    form.addEventListener('submit', function (event) {
-        // Prevent the form from submitting immediately
+    form.addEventListener('submit', function (event) { 
         event.preventDefault();
 
         if (validateForm()) {
             sendFormData(form);
         }
         else {
-            console.log("Form is invalid. Cannot send.");
+            console.log("Form is invalid!. Cannot send.");
         }
     });
 
+    // --------------------------------
     // Client Side - Validation Funtion
+    // --------------------------------
     function validateForm() {
         let isValid = true;
 
@@ -60,35 +61,66 @@ document.addEventListener('DOMContentLoaded', function () {
         return isValid;
     }
 
+    // -------------
     // Send Function
+    // -------------
     function sendFormData(form) {
-        const formData = new FormData(form);
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('button[type="submit"]');
+    const loader = document.getElementById('formLoader');
 
-        const actionUrl = form.getAttribute('action');
+    // Disable button and show loader
+    submitButton.disabled = true;
+    loader.style.display = 'inline-block';
 
-        fetch(actionUrl, {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    alert('✅ Message Sent Successfully! Thank you.');
-                    form.reset(); // Clear the form fields
-                } else {
-                    alert('❌ Error: ' + data.message);
-                }
-            })
-            .catch(error => {
-                // Handle network errors or issues with the fetch request
-                console.error('Fetch error:', error);
-                alert('An error occurred while sending the message. Please try again later.');
-            });
+    fetch('php/contact.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok, status: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        form.reset();
+        showPopup(data.message, data.success ? 'success' : 'error');
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+        showPopup('A network error occurred. Please try again later.', 'error');
+    })
+    .finally(() => {
+        // Re-enable button and hide loader
+        submitButton.disabled = false;
+        loader.style.display = 'none';
+    });
     }
 
+    // ---------------
+    // Pop-Up Function
+    // ---------------
+    function showPopup(message, type) {
+    const popup = document.getElementById('responseMessage');
+    popup.textContent = message;
+
+    if (type === 'success') {
+        popup.style.backgroundColor = '#d4edda';
+        popup.style.color = '#155724';
+        popup.style.border = '1px solid #c3e6cb';
+    } else {
+        popup.style.backgroundColor = '#f8d7da';
+        popup.style.color = '#721c24';
+        popup.style.border = '1px solid #f5c6cb';
+    }
+    
+    // Make it visible
+    popup.style.display = 'block';
+
+    // Optional: Make it disappear after a few seconds
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 5000);
+}
 });
