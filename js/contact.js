@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loader.classList.add('active');
 
 
-        fetch('php/contact.php', {
+        fetch('https://sohelchaus.infinityfreeapp.com/php/contact.php', {
             method: 'POST',
             body: formData
         })
