@@ -60,21 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButton.disabled = true;
         loader.classList.add('active');
 
-        // EMAIL JS
-        emailjs.sendForm("service_6ekxpdr", "template_bwtaf1o", form)
-            .then(function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-                form.reset();
-                showPopup("Message sent successfully!", "success");
-            }, function (error) {
-                console.error("FAILED...", error);
-                showPopup("⚠️ Failed to send message. Please try again later.", "error");
-            })
-            .finally(() => {
-                submitButton.disabled = false;
-                loader.classList.remove('active');
-            })
-
+        fetch('https://sohelchaus.byethost17.com/contact.php', {
+            method: 'POST',
+            body: formData
+        })
             .then(response => {
                 console.log("Response status:", response.status);
                 console.log("Response headers:", [...response.headers.entries()]);
