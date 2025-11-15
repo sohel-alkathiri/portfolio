@@ -51,7 +51,7 @@ body {
 
 /* LEFT SIDE | FORM */
 .left-panel {
-    background-image: url('images/profile2.webp');
+    background-image: url('images/profile-02.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,6 +79,7 @@ form {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .input-field {
@@ -151,7 +152,7 @@ textarea {
 }
 
 form button {
-    width: calc(100% - 2rem);
+    width: calc(100% - 3rem);
     padding: 0.75rem;
     margin: 0.5rem 1rem;
     border: none;
