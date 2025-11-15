@@ -6,15 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (validateForm()) {
             sendFormData(form);
-        }
-        else {
-            console.log("Form is invalid!. Cannot send.");
+        } else {
+            console.log("Form is invalid!");
         }
     });
 
-    // --------------------------------
-    // Client Side - Validation Funtion
-    // --------------------------------
+    // ----------------------------
+    // Client Side - Validation
+    // ----------------------------
     function validateForm() {
         let isValid = true;
 
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const subjectSelect = document.querySelector('[name="subject"]');
         const messageArea = document.querySelector('[name="message"]');
 
-        // Helper function - show/hide error styling
         const toggleError = (element, condition) => {
             if (condition) {
                 element.classList.add('error');
@@ -34,82 +32,68 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        // --- NAME Validation ---
         toggleError(nameInput, nameInput.value.trim() === '');
-
-        // --- MESSAGE Validation ---
         toggleError(messageArea, messageArea.value.trim() === '');
-
-        // --- SUBJECT Validation ---
         toggleError(subjectSelect, subjectSelect.value === '');
 
-        // --- EMAIL Validation ---
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  //Regex pattern
-        if (!emailPattern.test(emailInput.value.trim())) {
-            toggleError(emailInput, true);
-        } else {
-            toggleError(emailInput, false);
-        }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        toggleError(emailInput, !emailPattern.test(emailInput.value.trim()));
 
-        // --- PHONE Validation ---
         const phonePattern = /^[\d\s\-\(\)\+]{7,20}$/;
         if (phoneInput.value.trim() !== '' && !phonePattern.test(phoneInput.value.trim())) {
-            toggleError(phoneInput, true); // Invalid format if something is entered
+            toggleError(phoneInput, true);
         } else {
             toggleError(phoneInput, false);
         }
+
         return isValid;
     }
 
-    // -------------
+    // ----------------------------
     // Send Function
-    // -------------
+    // ----------------------------
     function sendFormData(form) {
         const formData = new FormData(form);
         const submitButton = form.querySelector('button[type="submit"]');
         const loader = document.getElementById('formLoader');
 
-        // Disable button and show loader
         submitButton.disabled = true;
-        // loader.style.display = 'inline-block';    
         loader.classList.add('active');
-
 
         fetch('https://sohelchaus.infinityfreeapp.com/php/contact.php', {
             method: 'POST',
             body: formData
         })
             .then(response => {
+                console.log("Response status:", response.status);
+                console.log("Response headers:", [...response.headers.entries()]);
                 if (!response.ok) {
                     throw new Error('Network response was not ok, status: ' + response.status);
                 }
                 return response.json();
             })
             .then(data => {
+                console.log("Response JSON:", data);
                 form.reset();
                 showPopup(data.message, data.success ? 'success' : 'error');
             })
             .catch(error => {
                 console.error('Fetch error:', error);
-                showPopup('A network error occurred. Please try again later.', 'error');
+                showPopup('⚠️ Network error occurred. Please try again later.', 'error');
             })
             .finally(() => {
-                // Re-enable button and hide loader
                 submitButton.disabled = false;
-                // loader.style.display = 'none';        
                 loader.classList.remove('active');
-
             });
     }
 
-    // ---------------
+    // ----------------------------
     // Pop-Up Function
-    // ---------------
+    // ----------------------------
     function showPopup(message, type) {
         const successBox = document.getElementById('successMessage');
         const errorBox = document.getElementById('errorMessage');
 
-        // Reset both boxes
         successBox.style.display = 'none';
         errorBox.style.display = 'none';
         successBox.classList.remove('show');
@@ -125,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
             errorBox.classList.add('show');
         }
 
-        // Auto-hide after 5 seconds
         setTimeout(() => {
             successBox.style.display = 'none';
             errorBox.style.display = 'none';
