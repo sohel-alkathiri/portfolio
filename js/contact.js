@@ -6,14 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (validateForm()) {
             sendFormData(form);
-        }
-        else {
-            console.log("Form is invalid!. Cannot send.");
+        } else {
+            console.log("Form is invalid! Cannot send.");
         }
     });
 
     // --------------------------------
-    // Client Side - Validation Funtion
+    // Client Side - Validation Function
     // --------------------------------
     function validateForm() {
         let isValid = true;
@@ -44,71 +43,43 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleError(subjectSelect, subjectSelect.value === '');
 
         // --- EMAIL Validation ---
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  //Regex pattern
-        if (!emailPattern.test(emailInput.value.trim())) {
-            toggleError(emailInput, true);
-        } else {
-            toggleError(emailInput, false);
-        }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        toggleError(emailInput, !emailPattern.test(emailInput.value.trim()));
 
-        // --- PHONE Validation ---
+        // --- PHONE Validation (optional) ---
         const phonePattern = /^[\d\s\-\(\)\+]{7,20}$/;
         if (phoneInput.value.trim() !== '' && !phonePattern.test(phoneInput.value.trim())) {
-            toggleError(phoneInput, true); // Invalid format if something is entered
+            toggleError(phoneInput, true);
         } else {
             toggleError(phoneInput, false);
         }
+
         return isValid;
     }
 
     // -------------
-    // Send Function
+    // Send Function (EmailJS)
     // -------------
     function sendFormData(form) {
-        const formData = new FormData(form);
         const submitButton = form.querySelector('button[type="submit"]');
         const loader = document.getElementById('formLoader');
 
         // Disable button and show loader
         submitButton.disabled = true;
-        // loader.style.display = 'inline-block';    
         loader.classList.add('active');
 
-
-        emailjs.sendForm("service_6ekxpdr", "template_bwtaf1o", form)
+        emailjs.sendForm("service_6ekxpdr", "template_lpylhuo", form)
             .then(function (response) {
                 console.log("SUCCESS!", response.status, response.text);
                 form.reset();
-                showPopup("Message sent successfully!", "success");
+                showPopup("Message sent!", "success");
             }, function (error) {
                 console.error("FAILED...", error);
-                showPopup("⚠️ Failed to send message. Please try again later.", "error");
+                showPopup("Message Not Sent.", "error");
             })
             .finally(() => {
                 submitButton.disabled = false;
                 loader.classList.remove('active');
-            })
-
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok, status: ' + response.status);
-                }
-                return response.json();
-            })
-            .then(data => {
-                form.reset();
-                showPopup(data.message, data.success ? 'success' : 'error');
-            })
-            .catch(error => {
-                console.error('Fetch error:', error);
-                showPopup('A network error occurred. Please try again later.', 'error');
-            })
-            .finally(() => {
-                // Re-enable button and hide loader
-                submitButton.disabled = false;
-                // loader.style.display = 'none';        
-                loader.classList.remove('active');
-
             });
     }
 
