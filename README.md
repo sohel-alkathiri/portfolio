@@ -7,7 +7,7 @@ This site showcases my work, skills, and projects, designed for professional and
 - Hosted on GitHub Pages 🖥️
 - Includes links to my projects, resume, and contact details 📂
 
-Check out my website here: [Portfolio Link]  
+Check out my website here: https://sohelchaus.github.io/portfolio/index.html  
 
 Stay connected! 🔗
 
