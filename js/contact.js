@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButton.disabled = true;
         loader.classList.add('active');
 
-        fetch('https://sohelchaus.byethost17.com/php/contact.php', {
+        fetch('https://sohelchaus.byethost17.com/contact.php', {
             method: 'POST',
             body: formData
         })
